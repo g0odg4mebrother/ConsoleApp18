@@ -243,14 +243,12 @@ namespace StoreExample
 {
     class Store
     {
-        // Поля класса
-        private string name;             // Название магазина
-        private string address;          // Адрес
-        private string profileDescription; // Описание профиля магазина
-        private string contactPhone;     // Контактный телефон
-        private string contactEmail;     // Контактный e-mail
+        private string name;             
+        private string address;          
+        private string profileDescription; 
+        private string contactPhone;   
+        private string contactEmail;    
 
-        // Метод для ввода данных
         public void InputData()
         {
             Console.Write("Введите название магазина: ");
@@ -269,7 +267,6 @@ namespace StoreExample
             contactEmail = Console.ReadLine();
         }
 
-        // Метод для вывода данных
         public void DisplayData()
         {
             Console.WriteLine("\nИнформация о магазине:");
@@ -280,7 +277,6 @@ namespace StoreExample
             Console.WriteLine($"Контактный e-mail: {contactEmail}");
         }
 
-        // Методы доступа (геттеры и сеттеры)
         public string GetName() => name;
         public void SetName(string value) => name = value;
 
@@ -303,13 +299,10 @@ namespace StoreExample
         {
             Store store = new Store();
 
-            // Ввод данных о магазине
             store.InputData();
 
-            // Вывод информации о магазине
             store.DisplayData();
 
-            // Пример изменения данных через методы доступа
             store.SetName("Магазин «Лучший выбор»");
             store.SetContactEmail("info@bestchoice.com");
 
